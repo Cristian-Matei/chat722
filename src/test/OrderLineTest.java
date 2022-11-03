@@ -40,8 +40,8 @@ class OrderLineTest {
         assertEquals(7*4*0.9, orderLine2.calculatePrice());
     }
 
-    @Test
-    void testFilmTitle(){
-        assertEquals("Avatar",orderLine1.getMovie().getTitle());
-    }
+//    @Test
+//    void testFilmTitle(){
+//        assertEquals("Avatar",orderLine1.getMovie().getTitle());
+//    }
 }
