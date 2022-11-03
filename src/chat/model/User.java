@@ -24,27 +24,11 @@ public class User {
         this.pending = new ArrayList<>();
     }
 
-    public void sendMessage(String text, String username){
-        // first check if the users are friends
-        boolean found = false;
-        User friend = null;
-        for (User u: this.getFriends()) {
-            if (u.username.equals(username)) {
-                found = true;
-                friend = u;
-                break;
-            }
-        }
-        if(found){
-            Message message = new Message(this, friend, text);
-            server.sendMessage(message);
-
-        }
-        else{
-            System.out.println("YOU ARE NOT FRIENDS!");
-        }
-        //Message message = new Message()
+    public void addFriend(User user){ //adds a new friend for the current user
+        this.friends.add(user);
+        user.getFriends().add(this);
     }
+
 
     public String getUsername() {
         return username;

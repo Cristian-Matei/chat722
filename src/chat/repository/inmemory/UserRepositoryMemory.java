@@ -19,6 +19,10 @@ public class UserRepositoryMemory implements UserRepository {
     public void populateUsers(){
         User user1 = new User("ion", "1234");
         User user2 = new User("marie", "12345");
+        User user3 = new User("gheorghe", "123456");
+
+        user1.addFriend(user2);
+        user2.addFriend(user3);
 
         this.allUsers.add(user1);
         this.allUsers.add(user2);
@@ -45,7 +49,12 @@ public class UserRepositoryMemory implements UserRepository {
     }
 
     @Override
-    public User findById(String s) {
+    public User findById(String username) {
+        for(User u: allUsers){
+            if(u.getUsername().equals(username)){
+                return u;
+            }
+        }
         return null;
     }
 
