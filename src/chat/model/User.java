@@ -1,5 +1,6 @@
 package chat.model;
 
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,8 +13,6 @@ public class User {
     private List<User> friends;
     private List<Message> received;
     private List<Message> pending;
-
-    private Server server;
 
     public User(String username, String password) {
         this.username = username;

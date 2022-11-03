@@ -60,6 +60,15 @@ public class UserRepositoryMemory implements UserRepository {
 
     @Override
     public User findByUsernameAndPassword(String username, String password) {
-        return null;
+        User user = findById(username);
+        if(user == null){
+            return null; //user does not exist
+        }
+        else{
+            if(user.getPassword().equals(password)){
+                return user;
+            }
+            return null;
+        }
     }
 }
