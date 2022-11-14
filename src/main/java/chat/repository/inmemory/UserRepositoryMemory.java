@@ -26,6 +26,7 @@ public class UserRepositoryMemory implements UserRepository {
 
         this.allUsers.add(user1);
         this.allUsers.add(user2);
+        this.allUsers.add(user3);
     }
 
     @Override

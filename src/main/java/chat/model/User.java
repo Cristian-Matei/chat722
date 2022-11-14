@@ -23,6 +23,22 @@ public class User {
         this.pending = new ArrayList<>();
     }
 
+    public User(){
+
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", status=" + status +
+                ", friends=" + friends +
+                ", received=" + received +
+                ", pending=" + pending +
+                '}';
+    }
+
     public void addFriend(User user){ //adds a new friend for the current user
         this.friends.add(user);
         user.getFriends().add(this);
@@ -37,7 +53,7 @@ public class User {
         return password;
     }
 
-    public boolean isOnline() { //returns true if user is online
+    public boolean isStatus() { //returns true if user is online
         return status;
     }
 

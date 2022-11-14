@@ -1,0 +1,22 @@
+[ {
+  "username" : "ion",
+  "password" : "1234",
+  "status" : false,
+  "friends" : [ ],
+  "received" : [ ],
+  "pending" : [ ]
+}, {
+  "username" : "marie",
+  "password" : "12345",
+  "status" : false,
+  "friends" : [ ],
+  "received" : [ ],
+  "pending" : [ ]
+}, {
+  "username" : "gheorghe",
+  "password" : "123456",
+  "status" : false,
+  "friends" : [ ],
+  "received" : [ ],
+  "pending" : [ ]
+} ]

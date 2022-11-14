@@ -14,7 +14,8 @@ public class MessageRepositoryMemory implements MessageRepository {
     private List<Message> allMessages;
     private UserRepository userRepository;
 
-    public MessageRepositoryMemory() {
+    public MessageRepositoryMemory(UserRepository userRepository) {
+        this.userRepository = new UserRepositoryMemory();
         this.allMessages = new ArrayList<>();
         populateMessages();
     }
